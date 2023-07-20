@@ -26,12 +26,21 @@ public class E03DiagonalDifference {
 
     private static int calcSecondarySum(int[][] matrix) {
         int sum = 0;
-        int col = matrix.length - 1;
+//        int col = matrix.length - 1;
+//
+//        for (int row = 0; row < matrix.length; row++) {
+//            sum += matrix[row][col--];
+//        }
 
-        for (int row = 0; row < matrix.length; row++) {
-            sum += matrix[row][col--];
+        int row = 0, col = matrix.length - 1;
 
+        while (col >= 0) {
+            sum += matrix[row][col];
+            row++;
+            col--;
         }
+
+        return sum;
 
         return sum;
     }
