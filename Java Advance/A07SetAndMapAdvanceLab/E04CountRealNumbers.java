@@ -22,8 +22,8 @@ public class E04CountRealNumbers {
             }
         }
 
-        for (Map.Entry<Double, Integer> entry : map.entrySet()) {
-            System.out.printf("%.1f -> %d%n", entry.getKey(), entry.getValue());
+        for (Map.Entry<Double, Integer> en : map.entrySet()) {
+            System.out.printf("%.1f -> %d%n", en.getKey(), en.getValue());
         }
     }
 }
