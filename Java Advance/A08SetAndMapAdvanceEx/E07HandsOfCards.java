@@ -18,9 +18,7 @@ public class E07HandsOfCards {
             Set<String> handsOfCards = new HashSet<>(Arrays.asList(cards.split(", ")));
 
             players.putIfAbsent(name, new HashSet<>());
-            Set<String> newCard = players.get(name);
-            newCard.addAll(handsOfCards);
-            players.put(name, newCard);
+            players.get(name).addAll(handsOfCards);
 
             input = scan.nextLine();
         }
